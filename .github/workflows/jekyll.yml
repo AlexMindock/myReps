@@ -26,6 +26,9 @@ concurrency:
   group: "pages"
   cancel-in-progress: false
 
+env:
+  API_KEY: ${{ secrets.GOOGLEMAPSAPIKEY }}
+
 jobs:
   # Build job
   build:
@@ -62,5 +65,3 @@ jobs:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
-        env:
-          API_KEY: ${{ secrets.GOOGLEMAPSAPIKEY }}
