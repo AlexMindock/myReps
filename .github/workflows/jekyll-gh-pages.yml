@@ -3,6 +3,12 @@ name: Deploy Jekyll with GitHub Pages dependencies preinstalled
 
 on:
   # Runs on pushes targeting the default branch
+  workflow_call:
+    secrets:
+      access-token:
+        description: 'google maps api key'
+        required: true
+    
   push:
     branches: ["main"]
 
@@ -22,6 +28,14 @@ concurrency:
   cancel-in-progress: false
 
 jobs:
+  pass-secret-to-action:
+    runs-on: ubuntu-latest
+    steps:
+    # passing the secret to an action
+      - name: Pass the received secret to an action
+        uses: ./.github/actions/my-action
+        with:
+          token: ${{ secrets.GOOGLEMAPSAPIKEY }}
   # Build job
   build:
     runs-on: ubuntu-latest
