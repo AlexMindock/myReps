@@ -33,7 +33,7 @@ jobs:
     steps:
       - name: replace config var
         run: |
-          echo "API_KEY: ${{ secrets.GOOGLEMAPSAPIKEY }} > _config.yml
+          echo "API_KEY: ${{ secrets.GOOGLEMAPSAPIKEY }}" > _config.yml
       - name: Checkout
         uses: actions/checkout@v4
       - name: Setup Ruby
