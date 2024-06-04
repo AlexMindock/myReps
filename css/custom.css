@@ -5,7 +5,11 @@ body {
     font-family: 'Open Sans', 'Arial', sans-serif;
 }
 
-h1, h2, h3, h4, h5 {
+h1,
+h2,
+h3,
+h4,
+h5 {
     font-family: 'Bitter', serif;
     font-weight: bold;
 }
@@ -15,12 +19,13 @@ h1 {
     padding-bottom: 10px;
 }
 
-h1 a, h1 a:hover {
+h1 a,
+h1 a:hover {
     color: #444444;
     text-decoration: none;
 }
 
-.table > thead > tr > th { 
+.table>thead>tr>th {
     white-space: nowrap;
 }
 
@@ -32,16 +37,21 @@ h1 a, h1 a:hover {
 .centered-pills {
     text-align: center
 }
+
 .centered-pills ul.nav-pills {
     display: inline-block
 }
+
 .centered-pills li {
     display: inline
 }
+
 .centered-pills a {
     float: left
 }
-* html .centered-pills ul.nav-pills, *+html .centered-pills ul.nav-pills {
+
+* html .centered-pills ul.nav-pills,
+*+html .centered-pills ul.nav-pills {
     display: inline
 }
 
@@ -79,5 +89,10 @@ h1 a, h1 a:hover {
 }
 
 #address-search {
+    background-image: none;
     background-color: #418B07;
+}
+
+.main-content {
+    margin-top: 50px;
 }
