@@ -61,10 +61,11 @@ GEM
 
 PLATFORMS
   ruby
+  x64-unknown
 
 DEPENDENCIES
   jekyll (= 4.2.0)
   jekyll-redirect-from
 
 BUNDLED WITH
-   1.17.2
+   2.5.11
